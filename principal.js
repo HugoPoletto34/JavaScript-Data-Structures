@@ -44,7 +44,6 @@ function baseConverter (decNumber, base) {
     }
     return baseString;
 }
-
 // console.log(baseConverter(100345, 35))
 
 /* Conversor de Base decimal para binário usando classe Pilha */
@@ -64,5 +63,32 @@ function decimalToBinary(decNumber) {
     return binaryString;
 
 }
-
 // for(let i = 0; i < 20; i++) console.log(i + ": " + decimalToBinary(i))
+
+// Jogo Batata Quente usando a classe fila simples
+function hotPotato(elementsList = names, num) {
+    const queue = new Queue();
+
+    const elimidatedList = [];
+    for(let i = 0; i < elementsList.length; i++) 
+        queue.insereElemento(elementsList[i])
+
+    while(queue.size() > 1) {
+        for(let i = 0; i < num; i++)
+            queue.insereElemento(queue.removeElemento());
+        elimidatedList.push(queue.removeElemento());
+    }
+
+    return {
+        eliminated: elimidatedList,
+        winner: queue.removeElemento()
+    }
+}
+/*
+const names = ['John', 'jack', 'Camila', 'Ingrid', 'Carl'] 
+const result = hotPotato(names, 7);
+result.eliminated.forEach(name => {
+    console.log(`${name} was eliminated`)
+})
+console.log("The winner was: " + result.winner);
+*/
