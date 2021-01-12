@@ -1,7 +1,7 @@
 export default class Queue {
 
     constructor() {
-        this.items = [];
+        this.items = {};
         this.qtde = 0;
         this.lowestCount = 0;
     }
