@@ -1,3 +1,4 @@
+/* Chamada da classe fila dupla */
 function MainDeque() {
     import Deque from './myWorks/Fila/fila-dupla.js'
     
@@ -20,8 +21,9 @@ function MainDeque() {
     console.log(deque.imprime());
 }
 
+/* Conversor de Base usando classe Pilha */
 function baseConverter (decNumber, base) {
-    import Stack from './stack.js'
+    import Stack from './myWorks/Pilha/stack.js'
     
     const remStack = new Stack();
     const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -41,10 +43,12 @@ function baseConverter (decNumber, base) {
     }
     return baseString;
 }
+
 // console.log(baseConverter(100345, 35))
 
+/* Conversor de Base decimal para binário usando classe Pilha */
 function decimalToBinary(decNumber) {
-    import Stack from './stack.js'
+    import Stack from './myWorks/Pilha/stack.js'
     
     const remStack = new Stack();
     let number = decNumber;
