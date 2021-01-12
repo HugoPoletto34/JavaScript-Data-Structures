@@ -1,7 +1,9 @@
+import Deque from './myWorks/Fila/fila-dupla.js'
+import Queue from './myWorks/Fila/fila.js'
+import Stack from './myWorks/Pilha/stack.js'
+
 /* Chamada da classe fila dupla */
 function MainDeque() {
-    import Deque from './myWorks/Fila/fila-dupla.js'
-    
     const deque = new Deque();
     console.log(deque.isEmpty());
     deque.insereElementoNoFim('John')
@@ -23,7 +25,6 @@ function MainDeque() {
 
 /* Conversor de Base usando classe Pilha */
 function baseConverter (decNumber, base) {
-    import Stack from './myWorks/Pilha/stack.js'
     
     const remStack = new Stack();
     const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -48,8 +49,6 @@ function baseConverter (decNumber, base) {
 
 /* Conversor de Base decimal para binário usando classe Pilha */
 function decimalToBinary(decNumber) {
-    import Stack from './myWorks/Pilha/stack.js'
-    
     const remStack = new Stack();
     let number = decNumber;
     let rem;
