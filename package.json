@@ -5,15 +5,11 @@
   "main": "principal.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node principal.js",
-    "dev": "nodemon principal.js"
+    "start": "node principal.js"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {},
-  "devDependencies": {
-    "nodemon": "^2.0.7",
-    "sucrase": "^3.17.0"
-  }
+  "devDependencies": {}
 }
