@@ -1,4 +1,4 @@
-export default class Fila {
+export default class Queue {
 
     constructor() {
         this.items = [];
