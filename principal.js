@@ -2,6 +2,36 @@ import Deque from './myWorks/Fila/fila-dupla.js'
 import Queue from './myWorks/Fila/fila.js'
 import Stack from './myWorks/Pilha/stack.js'
 
+// Verificador de palavras palíndromas usando a classe fila dupla
+function palindromeCheck (aString) {
+    if(aString === undefined  || aString === null || (aString !== null && aString.length === 0))
+        return false;
+    const deque = new Deque();
+    const strLower = aString.toLocaleLowerCase().split(' ').join('');
+    let lastChar, firstChar;
+    let isPalindrome = true;
+
+    for(let i = 0; i < strLower.length; i++) 
+        deque.insereElementoNoFim(strLower.charAt(i));
+
+    while (deque.size() > 1 && isPalindrome) {
+        firstChar = deque.removeElementoNaFrente();
+        lastChar = deque.removeElementoNoFim();
+
+        if(firstChar !== lastChar)
+            isPalindrome = false;
+    }
+    return isPalindrome;
+}
+/*
+console.log("arara: " + palindromeCheck('arara'))
+console.log("kayak: " + palindromeCheck('kayak'))
+console.log("was it a car or a cat I saw: " + palindromeCheck('was it a car or a cat I saw'))
+console.log("Step on no pets: " + palindromeCheck("Step on no pets"))
+console.log("pizza: " + palindromeCheck('pizza'))
+*/
+
+
 // Jogo Batata Quente usando a classe fila simples
 function hotPotato(elementsList = names, num) {
     const queue = new Queue();
