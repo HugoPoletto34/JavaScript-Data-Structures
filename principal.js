@@ -1,6 +1,46 @@
 import Deque from './myWorks/Fila/fila-dupla.js'
 import Queue from './myWorks/Fila/fila.js'
 import Stack from './myWorks/Pilha/stack.js'
+// Chamada da classe Lista Encadeada
+function MainLinkedList () {
+    const lista = new LinkedList();
+    console.log("Inserindo no Fim : 1, 2, 3, 4")
+    lista.insereFim(1)
+    lista.insereFim(2)
+    lista.insereFim(3)
+    lista.insereFim(4)
+
+    console.log("Inserindo 8 na posição 3")
+    lista.insereNaPosicao(8, 3)
+    console.log("Depois da inserção: " + lista.imprime())
+
+    console.log("Inserindo 5 na posição 0")
+    lista.insereNaPosicao(5, 0)
+    console.log("Depois da inserção: " + lista.imprime())
+
+    console.log("Inserindo 7 na posição 2")
+    lista.insereNaPosicao(7, 2)
+    console.log("Depois da inserção: " + lista.imprime())
+
+    console.log("Inserindo 6 na posição 1")
+    lista.insereNaPosicao(6, 1)
+    console.log("Depois da inserção: " + lista.imprime())
+
+    console.log("Removendo elemento 1")
+    lista.removeElemento(1)
+    console.log("Depois da remoção: " + lista.imprime())
+
+    console.log("Removendo elemento 4")
+    lista.removeElemento(4)
+    console.log("Depois da remoção: " + lista.imprime())
+
+    console.log("Removendo elemento 3")
+    lista.removeElemento(3)
+    console.log("Depois da remoção: " + lista.imprime())
+
+    console.log(lista.imprime());
+}
+// MainLinkedList();
 
 // Verificador de palavras palíndromas usando a classe fila dupla
 function palindromeCheck (aString) {
