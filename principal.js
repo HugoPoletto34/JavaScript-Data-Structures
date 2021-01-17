@@ -1,6 +1,25 @@
 import Deque from './myWorks/Fila/fila-dupla.js'
 import Queue from './myWorks/Fila/fila.js'
 import Stack from './myWorks/Pilha/stack.js'
+import { LinkedList } from './myWorks/Lista/lista-encadeada.js'
+import SortedLinkedList from './myWorks/Lista/lista-ordenada-encadeada.js'
+
+function MainSortedLinkedList () {
+    const lista = new SortedLinkedList();
+    lista.insereNaPosicao(4);
+    lista.insereNaPosicao(3);
+    lista.insereNaPosicao(2);
+    lista.insereNaPosicao(1);
+
+    console.log(lista.imprime());
+
+    lista.removeElemento(2)
+
+    console.log(lista.imprime());
+}
+// MainSortedLinkedList();
+
+
 // Chamada da classe Lista Encadeada
 function MainLinkedList () {
     const lista = new LinkedList();
